@@ -5,6 +5,7 @@ import { Menu, Row, Col } from "antd";
 
 import UserProfile from "../components/UserProfile";
 import LoginForm from "../components/LoginForm";
+import Order from "./Order";
 
 const AppLayout = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,6 +34,7 @@ const AppLayout = ({ children }) => {
         </Col>
         <Col xs={24} md={4}>
           {isLoggedIn ? <UserProfile /> : <LoginForm />}
+          <Order />
         </Col>
       </Row>
     </div>
