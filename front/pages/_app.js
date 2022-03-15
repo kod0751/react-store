@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import "antd/dist/antd.css";
 
+import wrapper from "../store/configureStore";
+
 const Store = ({ Component }) => {
   return (
     <>
@@ -19,4 +21,4 @@ Store.propTypes = {
   Component: PropTypes.elementType.isRequire,
 };
 
-export default Store;
+export default wrapper.withRedux(Store);
